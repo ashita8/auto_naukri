@@ -6,8 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-chrome_driver_path = "/Users/Ashita Aswal/Downloads/chromedriver_win32"
-
+chrome_driver_path = "/Users/Ashita Aswal/Downloads/chromedriver_win32" 
+#path where your chrome driver is.
 
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
@@ -19,15 +19,15 @@ Skillset = ['Analysis','Python','SQL']
 Skillset = [x.lower() for x in Skillset]
 
 driver.get("https://www.naukri.com/software-developer-web-developer-jobs?k=software%20developer%2C%20web%20developer&experience=0&ctcFilter=6to10&ctcFilter=10to15&ctcFilter=15to25&functionAreaIdGid=5&ugTypeGid=12")
-
+#you can change the above url as per yr preference
 login_button = driver.find_element_by_link_text("Login")
 login_button.click()
 
 
 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div[3]/div[2]/div[2]/div/div[2]/div/form/div[2]/input'))).click()
 
-driver.find_element_by_xpath('//*[@id="root"]/div[3]/div[2]/div[2]/div/div[2]/div/form/div[2]/input').send_keys("ashitaaswal8@gmail.com")
-driver.find_element_by_xpath('//*[@id="root"]/div[3]/div[2]/div[2]/div/div[2]/div/form/div[3]/input').send_keys("ashita8")
+driver.find_element_by_xpath('//*[@id="root"]/div[3]/div[2]/div[2]/div/div[2]/div/form/div[2]/input').send_keys("userid/emailid")
+driver.find_element_by_xpath('//*[@id="root"]/div[3]/div[2]/div[2]/div/div[2]/div/form/div[3]/input').send_keys("password")
 
 driver.find_element_by_xpath('//*[@id="root"]/div[3]/div[2]/div[2]/div/div[2]/div/form/div[6]/button').click()
 
