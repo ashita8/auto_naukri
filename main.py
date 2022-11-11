@@ -15,8 +15,6 @@ options.add_argument("disable-infobars")
 options.add_argument("--disable-extensions")
 driver = wb.Chrome(chrome_driver_path+"\\chromedriver.exe")
 
-Skillset = ['Analysis','Python','SQL']
-Skillset = [x.lower() for x in Skillset]
 
 driver.get("https://www.naukri.com/software-developer-web-developer-jobs?k=software%20developer%2C%20web%20developer&experience=0&ctcFilter=6to10&ctcFilter=10to15&ctcFilter=15to25&functionAreaIdGid=5&ugTypeGid=12")
 #you can change the above url as per yr preference
